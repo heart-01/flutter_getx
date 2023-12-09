@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx/pages/home.dart';
+import 'package:flutter_getx/pages/home_bottomnav.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class App extends StatelessWidget {
         useMaterial3: false,
         primarySwatch: Colors.blue,
       ),
-      home: const Home(),
+      home: const HomeBottomNav(),
     );
   }
 }
