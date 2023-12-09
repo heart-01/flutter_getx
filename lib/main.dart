@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/pages/home.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
   runApp(const App());
@@ -9,10 +11,13 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: const Text('Hello World'),
+      theme: ThemeData(
+        useMaterial3: false,
+        primarySwatch: Colors.blue,
+      ),
+      home: const Home(),
     );
   }
 }
