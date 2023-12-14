@@ -6,8 +6,8 @@ import 'package:get/get.dart';
 class ProductCart extends StatelessWidget {
   ProductCart({super.key});
 
-  final cartController = Get.find<CartController>();
-  final productCoontroller = Get.find<ProductController>();
+  final cartController = Get.put(CartController());
+  final productCoontroller = Get.put(ProductController());
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,9 @@ class ProductCart extends StatelessWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Text(product.name),
-                          Text("x${cartController.cartItemList[index].quantity}"),
+                          Text(
+                            "x${cartController.cartItemList[index].quantity}",
+                          ),
                         ],
                       ),
                     ),
